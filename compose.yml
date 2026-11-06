@@ -1,8 +1,10 @@
 services:
   web:
     image: python:3.12-alpine
-    network_mode: host          # binds port 80 on the VM; container hostname = VM name
+    network_mode: host # binds port 80 on the VM; container hostname = VM name
     restart: unless-stopped
     volumes:
       - ./app.py:/app/app.py:ro
-    command: ["python", "-u", "/app/app.py"]
+    command: ['python', '-u', '/app/app.py']
+    ports:
+      - '8s0:80'
