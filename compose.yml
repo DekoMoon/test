@@ -7,4 +7,4 @@ services:
       - ./app.py:/app/app.py:ro
     command: ['python', '-u', '/app/app.py']
     ports:
-      - '8s0:80'
+      - '80:80'
